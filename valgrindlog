@@ -1,0 +1,26 @@
+valgrind -v --leak-check=full --track-origins=yes
+==6828== 
+==6828== HEAP SUMMARY:
+==6828==     in use at exit: 22,790 bytes in 402 blocks
+==6828==   total heap usage: 83,249 allocs, 82,847 frees, 88,960,149 bytes allocated
+==6828== 
+==6828== Searching for pointers to 402 not-freed blocks
+==6828== Checked 1,051,508 bytes
+==6828== 
+==6828== LEAK SUMMARY:
+==6828==    definitely lost: 0 bytes in 0 blocks
+==6828==    indirectly lost: 0 bytes in 0 blocks
+==6828==      possibly lost: 0 bytes in 0 blocks
+==6828==    still reachable: 22,790 bytes in 402 blocks
+==6828==         suppressed: 0 bytes in 0 blocks
+==6828== Reachable blocks (those to which a pointer was found) are not shown.
+==6828== To see them, rerun with: --leak-check=full --show-reachable=yes
+==6828== 
+==6828== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 97 from 12)
+--6828-- 
+--6828-- used_suppression:      2 X on SUSE11 writev uninit padding
+--6828-- used_suppression:     95 U1004-ARM-_dl_relocate_object
+==6828== 
+==6828== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 97 from 12)
+
+ELEGANCKO :P
